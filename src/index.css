@@ -1,0 +1,92 @@
+/* Serve the core typefaces with the app: sign-in and storefront remain legible offline. */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-neutral-50 text-neutral-900 font-sans;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply text-neutral-900;
+  }
+  ::selection {
+    @apply bg-primary-100 text-primary-800;
+  }
+  input, textarea, select, button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .nb-container {
+    @apply mx-auto w-full max-w-ideal px-4 sm:px-6 lg:px-8;
+  }
+  .nb-container-wide {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+  .nb-card {
+    @apply bg-white border border-neutral-200 rounded-xl shadow-soft;
+  }
+  .nb-section-title {
+    @apply text-xl sm:text-h3 font-bold text-neutral-900;
+  }
+  .nb-section-sub {
+    @apply text-sm text-neutral-500 mt-1;
+  }
+  .nb-skeleton {
+    @apply rounded-lg bg-neutral-200;
+    background-image: linear-gradient(90deg, #E2E8F0 0px, #F1F5F9 40px, #E2E8F0 80px);
+    background-size: 400px 100%;
+    animation: shimmer 1.4s linear infinite;
+  }
+  .nb-focus {
+    @apply focus:outline-none focus:border-primary-500 focus:ring-[3px] focus:ring-primary-500/10;
+  }
+  .nb-link {
+    @apply text-primary-500 hover:text-primary-600 font-semibold transition-colors duration-fast;
+  }
+  .nb-table th {
+    @apply bg-neutral-50 text-caption font-bold text-neutral-500 uppercase tracking-wide text-left px-4 py-3 border-b border-neutral-200;
+  }
+  .nb-table td {
+    @apply px-4 py-4 text-sm text-neutral-700 border-b border-neutral-200;
+  }
+  .nb-table tbody tr:hover {
+    @apply bg-neutral-50;
+  }
+  .nb-scroll-x {
+    @apply overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0;
+  }
+  .nb-scroll-x::-webkit-scrollbar {
+    height: 6px;
+  }
+  .nb-scroll-x::-webkit-scrollbar-thumb {
+    @apply bg-neutral-200 rounded-full;
+  }
+  .font-data {
+    font-family: Inter, 'Plus Jakarta Sans', sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+}
