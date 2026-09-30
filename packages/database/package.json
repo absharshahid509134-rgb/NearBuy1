@@ -1,0 +1,24 @@
+{
+  "name": "@nearbuy/database",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "prisma:generate": "node ../../scripts/prisma-generate.mjs",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@nearbuy/types": "*",
+    "@prisma/adapter-pg": "^6.19.3",
+    "@prisma/client": "^6.19.3",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.23.1",
+    "prisma": "^6.19.3",
+    "tsx": "^4.19.0"
+  }
+}

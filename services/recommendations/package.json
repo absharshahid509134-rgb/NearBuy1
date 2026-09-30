@@ -1,0 +1,19 @@
+{
+  "name": "@nearbuy/service-recommendations",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "SERVICE_PORT=3116 ts-node --project ../../tsconfig.run.json src/main.ts",
+    "build": "tsc --project ../../tsconfig.run.json --noEmit",
+    "start": "ts-node --project ../../tsconfig.run.json src/main.ts"
+  },
+  "dependencies": {
+    "@nearbuy/server-core": "*",
+    "@nearbuy/database": "*",
+    "@nearbuy/config": "*",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
