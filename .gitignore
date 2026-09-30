@@ -1,0 +1,16 @@
+node_modules
+dist
+dist-api
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+!.env.development
+tsconfig.tsbuildinfo
+.pgdata
+.engines-bypass
+.next
+out
+coverage
+.vite

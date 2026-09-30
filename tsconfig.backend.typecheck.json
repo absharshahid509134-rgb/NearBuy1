@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["node"]
+  },
+  "include": [
+    "backend/src",
+    "packages/server-core/src",
+    "packages/validation/src",
+    "packages/config/src",
+    "packages/types/src",
+    "packages/database/src",
+    "packages/ai/src",
+    "packages/analytics/src",
+    "packages/maps/src",
+    "packages/notifications/src",
+    "packages/payments/src",
+    "packages/search/src"
+  ]
+}
