@@ -1,0 +1,11 @@
+{
+  "name": "@nearbuy/ai",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@nearbuy/search": "*",
+    "@nearbuy/types": "*"
+  }
+}
